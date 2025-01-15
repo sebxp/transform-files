@@ -1,6 +1,14 @@
 import { fetchData, getFileData, parseData } from "../services/file.service.js";
 
-// Controller for fetching file data
+const getFilesNames = async (req, res) => {
+  try {
+    const fileNames = await fetchData();
+    res.status(200).send(fileNames);
+  } catch (error) {
+    res.status(500).send("Internal Server Error");
+  }
+};
+
 const getFilesData = async (req, res) => {
   try {
     const fileNames = await fetchData();
@@ -22,4 +30,4 @@ const getFilesData = async (req, res) => {
   }
 };
 
-export { getFilesData };
+export { getFilesData, getFilesNames };
