@@ -1,10 +1,10 @@
-import express from "express";
-import { getFilesData, getFilesNames } from "../controllers/file.controller.js";
+import express from 'express'
+import { getFiles, getFilesList } from '../controllers/file.controller.js'
 
-const router = express.Router();
+const router = express.Router()
 
 // Endpoint to get all files: /files/data
-router.get("/data", getFilesData);
-router.get("/list", getFilesNames);
+router.get('/data', getFiles)
+router.get('/list', getFilesList)
 
-export default router;
+export default router
