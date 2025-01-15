@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import { useSelector } from "react-redux";
 
-function FileListTable({ data, onRowClick }) {
+function FileListTable({ onRowClick }) {
+  const data = useSelector((state) => state.files.fileList);
   return (
     <div className="container">
       <h3>File List</h3>
