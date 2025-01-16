@@ -5,7 +5,6 @@ const filesSlice = createSlice({
   initialState: {
     fileData: [],
     fileList: [],
-    isFileDetails: false,
   },
   reducers: {
     setFileData: (state, action) => {
@@ -14,12 +13,8 @@ const filesSlice = createSlice({
     setFileList: (state, action) => {
       state.fileList = action.payload;
     },
-    setIsFileDetails: (state, action) => {
-      state.isFileDetails = action.payload;
-    },
   },
 });
 
-export const { setFileData, setFileList, setIsFileDetails } =
-  filesSlice.actions;
+export const { setFileData, setFileList } = filesSlice.actions;
 export default filesSlice.reducer;

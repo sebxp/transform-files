@@ -1,7 +1,8 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router";
 import NotFound from "./components/FileNotFound";
 import Navbar from "./components/Navbar";
+import FileDetailsPage from "./pages/FileListDetails";
 import FileListPage from "./pages/FileListPage";
 import HomePage from "./pages/HomePage";
 
@@ -11,7 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/file" element={<HomePage />} />
+        <Route path="/file" element={<FileDetailsPage />} />
         <Route path="/filenames" element={<FileListPage />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
