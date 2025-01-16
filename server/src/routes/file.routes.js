@@ -1,10 +1,35 @@
-import express from 'express'
-import { getFiles, getFilesList } from '../controllers/file.controller.js'
+/**
+ * @fileoverview Routes for file-related operations.
+ * @module routes/file.routes
+ */
 
-const router = express.Router()
+import express from "express";
+import { getFiles, getFilesList } from "../controllers/file.controller.js";
 
-// Endpoint to get all files: /files/data
-router.get('/data', getFiles)
-router.get('/list', getFilesList)
+const router = express.Router();
 
-export default router
+/**
+ * Route to get file data.
+ * @name files/data
+ * @function
+ * @memberof module:routes/file.routes
+ * @inner
+ * @param {Request} req - Express request object.
+ * @param {Response} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
+router.get("/data", getFiles);
+
+/**
+ * Route to get list of files.
+ * @name files/list
+ * @function
+ * @memberof module:routes/file.routes
+ * @inner
+ * @param {Request} req - Express request object.
+ * @param {Response} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
+router.get("/list", getFilesList);
+
+export default router;
