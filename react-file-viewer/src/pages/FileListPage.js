@@ -6,6 +6,18 @@ import { useNavigate } from "react-router";
 import FileListTable from "../components/FileListTable";
 import { setFileData, setFileList } from "../redux/filesSlice";
 
+/**
+ * FileListPage component fetches and displays a list of files.
+ *
+ * This component uses the `useQuery` hook to fetch the file list from the server.
+ * It dispatches the fetched data to the Redux store and navigates to a file detail page on row click.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @example
+ * return <FileListPage />;
+ */
 function FileListPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

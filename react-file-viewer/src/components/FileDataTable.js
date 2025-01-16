@@ -2,6 +2,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { useSelector } from "react-redux";
 
+/**
+ * FileDataTable component renders a table displaying file data.
+ * It retrieves the file data from the Redux store using the useSelector hook.
+ *
+ * The table contains the following columns:
+ * - File name
+ * - Text
+ * - Number
+ * - Hex
+ *
+ * Each row in the table represents a line of data from a file.
+ *
+ * @component
+ * @example
+ * return (
+ *   <FileDataTable />
+ * )
+ */
 function FileDataTable() {
   const data = useSelector((state) => state.files.fileData);
   return (

@@ -41,7 +41,7 @@ describe("HomePage", () => {
     });
   });
 
-  test("renders loading state", () => {
+  it("renders loading state", () => {
     ReactQuery.useQuery.mockReturnValue({ isLoading: true });
 
     render(
@@ -55,7 +55,7 @@ describe("HomePage", () => {
     expect(screen.getByText("Loading...")).toBeInTheDocument();
   });
 
-  test("renders error state", () => {
+  it("renders error state", () => {
     ReactQuery.useQuery.mockReturnValue({ error: true });
 
     render(
@@ -69,7 +69,7 @@ describe("HomePage", () => {
     expect(screen.getByText("Error loading file data.")).toBeInTheDocument();
   });
 
-  test("renders FileDataTable when data is loaded", async () => {
+  it("renders FileDataTable when data is loaded", async () => {
     const data = [mockFileData];
     ReactQuery.useQuery.mockReturnValue({ data });
 
@@ -90,7 +90,7 @@ describe("HomePage", () => {
     });
   });
 
-  test("dispatches setFileData action when data is loaded", async () => {
+  it("dispatches setFileData action when data is loaded", async () => {
     const data = [mockFileData];
     ReactQuery.useQuery.mockReturnValue({ data });
 

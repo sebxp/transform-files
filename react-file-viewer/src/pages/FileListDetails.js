@@ -7,6 +7,19 @@ import FileDataTable from "../components/FileDataTable";
 import NotFound from "../components/FileNotFound";
 import { setFileData } from "../redux/filesSlice";
 
+/**
+ * FileDetailsPage component fetches and displays the details of a file.
+ *
+ * This component uses the `useLocation` hook to get the file name from the location state,
+ * and the `useQuery` hook to fetch the file details from the server.
+ *
+ * If the file details are successfully fetched, it dispatches an action to set the file data in the store.
+ *
+ * The component handles loading and error states, displaying appropriate messages.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered component.
+ */
 function FileDetailsPage() {
   const location = useLocation();
   const dispatch = useDispatch();

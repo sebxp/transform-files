@@ -48,7 +48,7 @@ describe("FileDetails", () => {
     });
   });
 
-  test("renders loading state", () => {
+  it("renders loading state", () => {
     ReactQuery.useQuery.mockReturnValue({ isLoading: true });
 
     render(
@@ -62,7 +62,7 @@ describe("FileDetails", () => {
     expect(screen.getByText("Loading...")).toBeInTheDocument();
   });
 
-  test("renders error state", () => {
+  it("renders error state", () => {
     ReactQuery.useQuery.mockReturnValue({
       isLoading: false,
       error: { response: { status: 500 } },
@@ -79,7 +79,7 @@ describe("FileDetails", () => {
     expect(screen.getByText("Error loading file data.")).toBeInTheDocument();
   });
 
-  test("renders 404 error state when file is not found", () => {
+  it("renders 404 error state when file is not found", () => {
     ReactQuery.useQuery.mockReturnValue({
       isLoading: false,
       error: { response: { status: 404 } },
@@ -98,7 +98,7 @@ describe("FileDetails", () => {
     expect(screen.getByText("404 - Not Found")).toBeInTheDocument();
   });
 
-  test("renders FileDataTable when data is loaded", async () => {
+  it("renders FileDataTable when data is loaded", async () => {
     const data = mockFileData;
     ReactQuery.useQuery.mockReturnValue({ data });
 
@@ -119,7 +119,7 @@ describe("FileDetails", () => {
     });
   });
 
-  test("dispatches setFileData action when data is loaded", async () => {
+  it("dispatches setFileData action when data is loaded", async () => {
     const data = mockFileData;
     ReactQuery.useQuery.mockReturnValue({ data });
 

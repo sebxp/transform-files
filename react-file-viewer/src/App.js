@@ -6,6 +6,23 @@ import FileDetailsPage from "./pages/FileListDetails";
 import FileListPage from "./pages/FileListPage";
 import HomePage from "./pages/HomePage";
 
+/**
+ * App component that sets up the main application routes using React Router.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered component.
+ *
+ * @example
+ * // Renders the App component with defined routes
+ * <App />
+ *
+ * Routes:
+ * - "/" renders HomePage component
+ * - "/file" renders FileDetailsPage component
+ * - "/filenames" renders FileListPage component
+ * - "/404" renders NotFound component
+ * - "*" renders NotFound component for any undefined routes
+ */
 function App() {
   return (
     <Router>

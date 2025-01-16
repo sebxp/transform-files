@@ -5,6 +5,17 @@ import { useDispatch } from "react-redux";
 import FileDataTable from "../components/FileDataTable";
 import { setFileData } from "../redux/filesSlice";
 
+/**
+ * HomePage component that fetches file data and displays it in a table.
+ *
+ * This component uses the `useQuery` hook to fetch file data from the server.
+ * It dispatches the fetched data to the Redux store using the `setFileData` action.
+ * While the data is being loaded, it displays a loading message.
+ * If there is an error during the data fetching, it displays an error message.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered component.
+ */
 function HomePage() {
   const dispatch = useDispatch();
   const { data, error, isLoading } = useQuery({

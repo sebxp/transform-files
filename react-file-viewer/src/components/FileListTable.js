@@ -2,6 +2,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { useSelector } from "react-redux";
 
+/**
+ * Component that renders a table of file names.
+ *
+ * @param {Object} props - The component props.
+ * @param {Function} props.onRowClick - Callback function to handle row click events.
+ * @returns {JSX.Element} The rendered component.
+ */
 function FileListTable({ onRowClick }) {
   const data = useSelector((state) => state.files.fileList);
   return (
