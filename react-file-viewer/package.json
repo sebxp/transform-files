@@ -2,7 +2,6 @@
   "name": "react-file-viewer",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
     "@tanstack/react-query-devtools": "^5.64.1",
