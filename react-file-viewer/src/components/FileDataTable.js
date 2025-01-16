@@ -19,7 +19,7 @@ function FileDataTable() {
         <tbody>
           {data.map((file) =>
             file.lines.map((line) => (
-              <tr key={line.text}>
+              <tr data-testid="data-row" key={line.text}>
                 <td>{file.file}</td>
                 <td>{line.text}</td>
                 <td>{line.number}</td>

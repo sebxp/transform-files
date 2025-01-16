@@ -23,9 +23,9 @@ function FileListPage() {
   }, [dispatch, data]);
 
   const handleRowClick = async (fileName) => {
-    setFileData([]);
+    dispatch(setFileData([]));
     navigate(`/file?fileName=${fileName}`, {
-      state: { fileName: fileName },
+      state: { fileName },
     });
   };
 

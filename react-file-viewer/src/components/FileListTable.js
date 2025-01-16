@@ -15,7 +15,11 @@ function FileListTable({ onRowClick }) {
         </thead>
         <tbody>
           {data.map((fileName, idx) => (
-            <tr key={idx} onClick={() => onRowClick(fileName)}>
+            <tr
+              data-testid="data-row"
+              key={idx}
+              onClick={() => onRowClick(fileName)}
+            >
               <td>{fileName}</td>
             </tr>
           ))}
